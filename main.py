@@ -9,11 +9,6 @@
 @Version 0.0.1
 @Description None
 """
-from time import sleep
-
-from openpyxl.reader.excel import load_workbook
-from selenium.common import NoSuchElementException
-from selenium.webdriver.common.by import By
 
 from common.logging_log import MyLogger
 from common.read_config import ReadConfig
