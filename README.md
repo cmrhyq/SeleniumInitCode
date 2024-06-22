@@ -21,9 +21,10 @@
 
 ## 代码框架 Code Framework
 
-|      |      |      |
-| ---- | ---- | ---- |
-|      |      |      |
-|      |      |      |
-|      |      |      |
+- loguru==0.7.2
+- openpyxl==3.1.4
+- PySocks==1.7.1
+- python-dateutil==2.9.0.post0
+- pyzm==26.0.3
+- selenium==4.21.0
 
