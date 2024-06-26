@@ -44,6 +44,18 @@ class ReadConfig(object):
     def site_data_total(self):
         return self._get("site", 'data_total')
 
+    @property
+    def mail_host(self):
+        return self._get("mail", 'host')
+
+    @property
+    def mail_sender(self):
+        return self._get("mail", 'sender')
+
+    @property
+    def mail_license(self):
+        return self._get("mail", 'license')
+
 
 if __name__ == '__main__':
     conf = ReadConfig()
