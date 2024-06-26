@@ -26,7 +26,7 @@ from common.read_config import ReadConfig
 
 conf = ReadConfig()
 # 日志设置
-log = MyLogger(tag='ballLog', colorful=True, save_pth="../logs", existing_counts=7)
+log = MyLogger(tag='ballLog', colorful=True, save_pth="../../logs", existing_counts=7)
 
 
 def format_email(send_email):
