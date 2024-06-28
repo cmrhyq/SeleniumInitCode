@@ -29,7 +29,6 @@ conf = ReadConfig()
 log = MyLogger(tag='ballLog', colorful=True, save_pth="../../logs", existing_counts=7)
 
 
-# TODO 方法还有问题
 class SendEmail(object):
     """
     :param receivers: 收件人，可设置多个收件人：abc@yahoo.com.a,cba@yahoo.com
