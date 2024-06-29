@@ -34,8 +34,6 @@ class SendEmail(object):
     :param receivers: 收件人，可设置多个收件人：abc@yahoo.com.a,cba@yahoo.com
     :param theme: 主题
     :param content: 内容
-    :param attachments_path: 附件文件路径
-    :param attachments_type: 附件文件类型，1=文件，2=图片
     """
 
     def __init__(self, receivers: str, theme: str, content: str):
