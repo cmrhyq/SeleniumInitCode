@@ -8,15 +8,17 @@
 @Description None
 """
 import configparser
-from config.conf import cm
+from config.manager_config import ManagerConfig
 
 
 class ReadConfig(object):
-    """配置文件"""
-
+    """
+    配置文件
+    """
     def __init__(self):
+        self.manager_config = ManagerConfig()
         self.config = configparser.RawConfigParser()  # 当有%的符号时请使用Raw读取
-        self.config.read(cm.ini_file, encoding='utf-8')
+        self.config.read(self.manager_config.system_ini_file, encoding='utf-8')
 
     def _get(self, section, option):
         """获取"""
@@ -25,12 +27,20 @@ class ReadConfig(object):
     def _set(self, section, option, value):
         """更新"""
         self.config.set(section, option, value)
-        with open(cm.ini_file, 'w') as f:
+        with open(self.manager_config.system_ini_file, 'w') as f:
             self.config.write(f)
 
     @property
     def url(self):
         return self._get("site", 'url')
+
+    @property
+    def site_username(self):
+        return self._get("site", 'username')
+
+    @property
+    def site_password(self):
+        return self._get("site", 'password')
 
     @property
     def log_filename(self):
@@ -39,10 +49,6 @@ class ReadConfig(object):
     @property
     def chrome_driver(self):
         return self._get("chrome", 'driver')
-
-    @property
-    def site_data_total(self):
-        return self._get("site", 'data_total')
 
     @property
     def mail_host(self):
@@ -55,8 +61,3 @@ class ReadConfig(object):
     @property
     def mail_license(self):
         return self._get("mail", 'license')
-
-
-if __name__ == '__main__':
-    conf = ReadConfig()
-    print(conf.url)
