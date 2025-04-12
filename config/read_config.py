@@ -43,16 +43,16 @@ class ReadConfig(object):
         return self._get("site", 'password')
 
     @property
-    def log_filename(self):
-        return self._get("log", 'filename')
-
-    @property
     def chrome_driver(self):
         return self._get("chrome", 'driver')
 
     @property
     def mail_host(self):
         return self._get("mail", 'host')
+
+    @property
+    def mail_port(self):
+        return self._get("mail", 'port')
 
     @property
     def mail_sender(self):
