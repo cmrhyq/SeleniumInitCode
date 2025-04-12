@@ -9,67 +9,130 @@
 """
 import os
 import time
-from telnetlib import EC
 
+import pyperclip
 from selenium import webdriver
-from selenium.common import NoSuchElementException
-from selenium.webdriver import ActionChains
+from selenium.webdriver.support import expected_conditions as ec
+from selenium.common import NoSuchElementException, TimeoutException
+from selenium.webdriver import ActionChains, Keys
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
+from webdriver_manager.chrome import ChromeDriverManager
 
-from common.read_config import ReadConfig
-from common.selenium.selenium_base import BrowserSimulateBase
-from utils.internet_utils import get_random_pc_ua
-from utils.selector_utils import identify_selector_type, extract_value_from_selector
+from domain.entity.selenium import SeleniumBase, LocateElementOptions
+from domain.enum.enums import LocateElementMethod
+from utils.internet.internet_utils import get_random_pc_ua
+
+from common.log import Logger, log_execution
 
 
-class SeleniumSimulate(BrowserSimulateBase):
+class SeleniumService:
+    """Selenium 服务类，提供浏览器自动化操作"""
+
     def __init__(self):
-        super().__init__()
+        self.logger = Logger(name="selenium").get_logger()
         self.browser = None
 
-    # 启动浏览器
-    # is_headless 是否开启无头模式
-    # is_cdp 是否使用cdp (Chrome Devtools Protocol)
-    def start_browser(self, is_headless=False, is_cdp=False, is_dev=False, proxy=None, is_socks5=False, *args,
-                      **kwargs) -> webdriver.Chrome:
-        """
-        启动 Chrome 浏览器。
+    @log_execution(level="INFO")
+    def start_browser(self, config: SeleniumBase) -> webdriver.Chrome:
+        """启动 Chrome 浏览器"""
+        try:
+            option = webdriver.ChromeOptions()
+            if config.is_headless:
+                self.logger.info("启动无头模式")
+                option.add_argument('--headless')
+            elif config.is_cdp:
+                self.logger.info("启动CDP模式")
+                option.add_experimental_option('excludeSwitches', ['enable-automation'])
+                option.add_experimental_option('useAutomationExtension', False)
 
-        Args:
-            is_headless (bool, optional): 是否开启无头模式。默认为 False。
-            is_cdp (bool, optional): 是否使用 Chrome Devtools Protocol。默认为 False。
-            is_dev (bool, optional): 是否启用调试模式。默认为 False。
-            proxy (str, optional): 代理设置。默认为 None。
-            is_socks5 (bool, optional): 是否使用 SOCKS5 代理。默认为 False。
-            *args, **kwargs: 其他参数。
+            if config.proxy:
+                self.logger.info(f"设置代理: {config.proxy_value}")
+                option.ignore_local_proxy_environment_variables()
+                os.environ['HTTPS_PROXY'] = config.proxy_value
+                os.environ['HTTP_PROXY'] = config.proxy_value
 
-        Returns:
-            webdriver.Chrome: 已启动的 Chrome 浏览器对象。
-        """
-        option = webdriver.ChromeOptions()
-        if is_headless:
-            option.add_argument('--headless')
-        elif is_cdp:
-            option.add_experimental_option('excludeSwitches', ['enable-automation'])
-            option.add_experimental_option('useAutomationExtension', False)
-        elif proxy:
-            if is_socks5:
-                option.add_argument('--proxy-server=socks5://' + proxy)
-            else:
-                option.add_argument('--proxy-server=http://' + proxy)
+            service = Service(config.driver or ChromeDriverManager().install())
+            ua = get_random_pc_ua()
+            self.logger.debug(f"使用User-Agent: {ua}")
+            option.add_argument(f'user-agent={ua}')
 
-        option.add_argument(get_random_pc_ua())
-        self.browser = webdriver.Chrome(service=Service(ReadConfig().chrome_driver), options=option)
-        if is_cdp:
-            self.browser.execute_cdp_cmd('Page.addScriptToEvaluateOnNewDocument', {
-                'source': 'Object.defineProperty(navigator, "webdriver", {get:()=>undefined})'
-            })
+            self.browser = webdriver.Chrome(service=service, options=option)
+            self.browser.maximize_window()
 
-        # self.browser.set_window_size(WINDOW_WIDTH, WINDOW_HEIGHT)
-        self.browser.maximize_window()
-        return self.browser
+            if config.is_cdp:
+                self.browser.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
+                    "source": """
+                        Object.defineProperty(navigator, 'webdriver', {
+                            get: () => undefined
+                        })
+                    """
+                })
+
+            self.logger.info("浏览器启动成功")
+            return self.browser
+
+        except Exception as e:
+            self.logger.error(f"浏览器启动失败: {str(e)}")
+            raise
+
+    @log_execution(level="INFO")
+    def locate_and_operate_element(self, options: LocateElementOptions):
+        """定位元素并执行操作"""
+        try:
+            self.logger.debug(f"开始定位元素: {options.by}={options.value}")
+
+            if not isinstance(options.wait, WebDriverWait):
+                raise ValueError("wait 参数必须是 WebDriverWait 类型")
+            if not options.value:
+                raise ValueError(f"value 参数不能为空")
+
+            element = options.wait.until(ec.presence_of_element_located((options.by, options.value)))
+
+            if not options.method:
+                if options.is_more:
+                    elements = options.wait.until(ec.presence_of_all_elements_located((options.by, options.value)))
+                    self.logger.debug(f"找到 {len(elements)} 个元素")
+                    return elements
+                if options.check_visibility:
+                    return options.wait.until(ec.visibility_of_element_located((options.by, options.value)))
+                return element
+
+            if options.method == LocateElementMethod.CLICK:
+                self.logger.debug(f"点击元素: {options.by}={options.value}")
+                options.wait.until(ec.element_to_be_clickable((options.by, options.value))).click()
+                time.sleep(2)
+            elif options.method == LocateElementMethod.INPUT:
+                if not options.key:
+                    raise ValueError("输入操作必须提供key参数")
+                self.logger.debug(f"输入内容: {options.key}")
+                options.wait.until(ec.visibility_of_element_located((options.by, options.value)))
+                self._safe_input(element, options.key)
+
+        except TimeoutException:
+            self.logger.error(f"元素定位超时: {options.by}={options.value}")
+            return None
+        except NoSuchElementException:
+            self.logger.error(f"元素不存在: {options.by}={options.value}")
+            return None
+        except Exception as e:
+            self.logger.error(f"元素操作失败: {str(e)}")
+            return None
+
+    def _safe_input(self, element, text):
+        """安全的输入文本方法"""
+        try:
+            pyperclip.copy(text)
+            time.sleep(0.2)
+            element.send_keys(Keys.CONTROL, 'A')
+            time.sleep(0.2)
+            element.send_keys(Keys.DELETE)
+            time.sleep(0.2)
+            element.send_keys(Keys.CONTROL, 'V')
+            time.sleep(0.2)
+        except Exception as e:
+            self.logger.error(f"输入文本失败: {str(e)}")
+            raise
 
     # 启动页面
     def start_page(self, url):
@@ -82,57 +145,6 @@ class SeleniumSimulate(BrowserSimulateBase):
        无返回值。
        """
         self.browser.get(url)
-
-    # 显式等待
-    # timeout等待的最长时间
-    def wait_until_element(self, selector_location, timeout=None, selector_type=None):
-        """
-        等待指定的元素出现在页面中。
-
-        参数:
-        selector_location (str): 要等待的元素选择器。
-        timeout (int, optional): 等待的最大时间（秒）。如果未提供，将使用默认超时时间。
-        selector_type (str, optional): 选择器类型（例如 'css', 'xpath' 等）。
-
-        无返回值。
-        """
-        wait = WebDriverWait(self.browser, timeout)
-        if selector_type:
-            selector_type = self.get_selector_type(selector_type)
-        else:
-            selector_type = self.get_selector_type(identify_selector_type(selector_location))
-            selector_location = extract_value_from_selector(selector_location)
-        wait.until(EC.presence_of_element_located((selector_type, selector_location)))
-
-    # 获取定位类型
-    def get_selector_type(self, selector_type):
-        """
-        将自定义的选择器类型映射为Selenium的选择器类型。
-        参数:
-        selector_type (str): 自定义的选择器类型（例如 'css', 'xpath' 等）。
-
-        返回:
-        by_type (selenium.webdriver.common.by.By): Selenium的选择器类型。
-        """
-        by_type = ""
-        selector_type = selector_type.lower()
-        if selector_type == 'id':
-            by_type = By.ID
-        elif selector_type == 'xpath':
-            by_type = By.XPATH
-        elif selector_type == 'link_text':
-            by_type = By.LINK_TEXT
-        elif selector_type == 'partial_link_text':
-            by_type = By.PARTIAL_LINK_TEXT
-        elif selector_type == 'name':
-            by_type = By.NAME
-        elif selector_type == 'tag':
-            by_type = By.TAG_NAME
-        elif selector_type == 'class':
-            by_type = By.CLASS_NAME
-        elif selector_type == 'css':
-            by_type = By.CSS_SELECTOR
-        return by_type
 
     # 等待时间
     def wait_for_time(self, timeout):
@@ -147,69 +159,60 @@ class SeleniumSimulate(BrowserSimulateBase):
         time.sleep(timeout)
 
     # 查找多个元素
-    def find_elements(self, selector_location, selector_type=None):
-        # 传了selector_type就获取 没传就通过selector_location进行解析
+    def find_elements(self, selector_element, selector_type=None):
+        # 传了selector_type就获取 没传就通过selector_element进行解析
 
         """
         查找多个元素。
 
         参数:
-        selector_location (str): 要查找的元素选择器。
+        selector_element (str): 要查找的元素选择器。
         selector_type (str, optional): 选择器类型（例如 'css', 'xpath' 等）。
 
         返回:
         elements (list): 包含匹配元素的列表。
         """
-        if selector_type:
-            selector_type = self.get_selector_type(selector_type)
-        else:
-            selector_type = self.get_selector_type(identify_selector_type(selector_location))
-            selector_location = extract_value_from_selector(selector_location)
-        return self.browser.find_elements(selector_type, selector_location)
+        return self.browser.find_elements(selector_type, selector_element)
 
     # 查找元素
-    def find_element(self, selector_location, selector_type=None):
+    @log_execution(level="INFO")
+    def find_element(self, selector_type=None, selector_element=None):
         """
         查找单个元素。
 
         参数:
-        selector_location (str): 要查找的元素选择器。
+        selector_element (str): 要查找的元素选择器。
         selector_type (str, optional): 选择器类型（例如 'css', 'xpath' 等）。
 
         返回:
         element (WebElement): 匹配的元素。
         """
         try:
-            if selector_type:
-                by_type = self.get_selector_type(selector_type)
-            else:
-                by_type = self.get_selector_type(identify_selector_type(selector_location))
-                selector_location = extract_value_from_selector(selector_location)
-
-            element = self.browser.find_element(by_type, selector_location)
+            element = self.browser.find_element(selector_type, selector_element)
             return element
         except NoSuchElementException:
             # 处理元素未找到的情况
-            print(f"未找到匹配的元素: {selector_location}")
+            self.logger.error(f"未找到匹配的元素: {selector_element}")
             return None  # 或者你可以选择抛出自定义的异常，或者返回其他默认值
 
     # 输入框 输入内容并提交
-    def send_keys(self, selector_location, input_content, selector_type=None):
+    @log_execution(level="INFO")
+    def send_keys(self, selector_element, input_content, selector_type=None):
         """
         在指定的选择器位置输入文本内容。
 
         参数:
-        selector_location (str): 要输入文本的元素选择器。
+        selector_element (str): 要输入文本的元素选择器。
         input_content (str): 要输入的文本内容。
         selector_type (str, optional): 选择器类型（例如 'css', 'xpath' 等）。
 
         无返回值。
         """
-        input_element = self.find_element(selector_location, selector_type)  # 查找输入框元素
+        input_element = self.find_element(selector_element, selector_type)  # 查找输入框元素
         if input_element:
             input_element.send_keys(input_content)  # 输入文本内容
         else:
-            print(f"未找到元素: {selector_location}")
+            self.logger.error(f"未找到元素: {selector_element}")
 
     # 执行js命令
     def execute_script(self, script_command):
@@ -305,7 +308,7 @@ class SeleniumSimulate(BrowserSimulateBase):
         """
         # 如果未提供文件路径，默认保存为'screenshot.png'在当前目录下
         if not file_path:
-            file_path = 'screenshot.png'
+            file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "\\resource\\image\\screenshot.png")
         # 获取文件扩展名
         file_extension = os.path.splitext(file_path)[1][1:]
         # 如果不是png格式，转换成png
@@ -313,6 +316,7 @@ class SeleniumSimulate(BrowserSimulateBase):
             file_path = os.path.splitext(file_path)[0] + '.png'
 
         # 截取屏幕截图并保存
+        self.logger.info(f"截图保存路径: {file_path}")
         self.browser.save_screenshot(file_path)
 
     # 关闭浏览器
@@ -324,21 +328,23 @@ class SeleniumSimulate(BrowserSimulateBase):
         """
         self.browser.close()
 
-    def click(self, selector_location, selector_type=None):
+
+    @log_execution(level="INFO")
+    def click(self, selector_element, selector_type=None):
         """
         在页面上点击指定的元素。
 
         参数:
-        selector_location (str): 要点击的元素选择器。
+        selector_element (str): 要点击的元素选择器。
         selector_type (str, optional): 选择器类型（例如 'css', 'xpath' 等）。
 
         无返回值。
         """
-        element = self.find_element(selector_location, selector_type)  # 查找要点击的元素
+        element = self.find_element(selector_element, selector_type)  # 查找要点击的元素
         if element:
             element.click()  # 点击元素
         else:
-            print(f"未找到元素: {selector_location}")
+            self.logger.error(f"未找到元素: {selector_element}")
 
     # 拉拽动作
     def drag_and_drop(self, source_element, target_element):
@@ -378,22 +384,13 @@ class SeleniumSimulate(BrowserSimulateBase):
         """
         return self.browser.page_source
 
-    def get_child_element_count(self, selector_location, selector_type=None):
+    def get_child_element_count(self, selector_element, selector_type=None):
         """
         获取当前元素的子元素数量
-        :param selector_location: (str): 要查找的元素选择器。
+        :param selector_element: (str): 要查找的元素选择器。
         :param selector_type: (str, optional): 选择器类型（例如 'css', 'xpath' 等）。
         :return:
         """
-        if selector_type:
-            selector_type = self.get_selector_type(selector_type)
-        else:
-            selector_type = self.get_selector_type(identify_selector_type(selector_location))
-            selector_location = extract_value_from_selector(selector_location)
-
-        element = self.browser.find_element(selector_type, selector_location)
+        element = self.browser.find_element(selector_type, selector_element)
         child_element_count = len(element.find_elements(selector_type, "./child::*"))
         return child_element_count
-
-
-selenium_service = SeleniumSimulate()
