@@ -1,0 +1,4 @@
+2025-04-13 00:14:12.229 | INFO     | common.selenium.selenium_service:start_browser:46 | 启动CDP模式
+2025-04-13 00:14:17.881 | DEBUG    | common.selenium.selenium_service:start_browser:57 | 使用User-Agent: Mozilla/5.0 (Windows NT 5.1; rv:21.0) Gecko/20100101 Firefox/21.0
+2025-04-13 00:14:19.107 | INFO     | common.selenium.selenium_service:start_browser:72 | 浏览器启动成功
+2025-04-13 00:14:25.775 | ERROR    | common.selenium.selenium_service:find_element:195 | 未找到匹配的元素: //*[@id="searchRoot"]/div[1]/div[1]/div/div[1]/div[2]/button
