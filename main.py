@@ -9,18 +9,25 @@
 @Version 0.0.1
 @Description None
 """
-
-from common.logging_log import MyLogger
-from common.read_config import ReadConfig
-from common.selenium.selenium_service import SeleniumSimulate
+# import logging
+#
+# from system_config.ini.read_config import ReadConfig
+# from common.selenium.selenium_service import SeleniumService
 
 # 常用配置
-conf = ReadConfig()
-selenium_service = SeleniumSimulate()
-browser = selenium_service.start_browser()
-# 日志设置
-log = MyLogger(tag='ballLog', colorful=True, save_pth="../logs", existing_counts=7)
+# conf = ReadConfig()
+# selenium_service = SeleniumService()
+# browser = selenium_service.start_browser()
+# # 日志设置
+# logging.basicConfig(
+#     level=logging.INFO,
+#     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+#     handlers=[
+#         logging.FileHandler(conf.log_save_path),
+#         logging.StreamHandler()
+#     ]
+# )
+# logger = logging.getLogger(rc.log_tag)
 
 
-if __name__ == '__main__':
-    browser.get(conf.url)
+
