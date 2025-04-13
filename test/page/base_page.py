@@ -1,6 +1,6 @@
 from common.selenium.selenium_service import SeleniumService
 from config.read_config import ReadConfig
-from domain.entity.selenium import SeleniumBase
+from model.entity.selenium import SeleniumBase
 
 
 class BasePage(SeleniumService):

@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 from selenium.webdriver.support.wait import WebDriverWait
 
-from domain.enum.enums import LocateElementMethod
+from model.enum.enums import LocateElementMethod
 
 
 @dataclass
