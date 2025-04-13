@@ -54,8 +54,6 @@ requirements.txt --- 依赖包
 
 loguru~=0.7.3
 
-python-dateutil==2.9.0.post0
-
 selenium~=4.29.0
 
 pyperclip~=1.9.0
