@@ -74,7 +74,7 @@ def pytest_configure(config):
 
     # 3、动态生成log文件的名称，哪怕配置文件中配置了log_file选项也不会生效
     time_now = datetime.now().strftime('%Y%m%d%H%M%S')
-    config.option.log_file = os.path.join(config.rootdir, 'log', f'{time_now}.log')
+    config.option.log_file = os.path.join(config.rootdir, 'logs', f'{time_now}.log')
 
 
 # 4、修改摘要信息
