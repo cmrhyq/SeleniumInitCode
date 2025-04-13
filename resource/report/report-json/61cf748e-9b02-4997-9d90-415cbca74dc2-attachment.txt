@@ -1,0 +1,2 @@
+关闭浏览器
+002传入了logout fixture

@@ -19,8 +19,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 
-from domain.entity.selenium import SeleniumBase, LocateElementOptions
-from domain.enum.enums import LocateElementMethod
+from model.entity.selenium import SeleniumBase, LocateElementOptions
+from model.enum.enums import LocateElementMethod
 from utils.internet.internet_utils import get_random_pc_ua
 
 from common.log import Logger, log_execution
@@ -308,7 +308,7 @@ class SeleniumService:
         """
         # 如果未提供文件路径，默认保存为'screenshot.png'在当前目录下
         if not file_path:
-            file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "\\resource\\image\\screenshot.png")
+            file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "\\resource\\image\\screenshot\\screenshot.png")
         # 获取文件扩展名
         file_extension = os.path.splitext(file_path)[1][1:]
         # 如果不是png格式，转换成png

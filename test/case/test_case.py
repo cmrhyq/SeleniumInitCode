@@ -15,7 +15,7 @@ def logout():
 
 
 
-class TestLogin:
+class TestCase:
     # 传入lonin fixture
     def test_001(self, login):
         print("001传入了loging fixture")
