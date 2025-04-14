@@ -3,9 +3,10 @@ import pytest
 from test.page.login_page import LoginPage
 
 
-def test_login():
-    """
-    测试登录
-    :return:
-    """
-    LoginPage().login()
+class TestLoginPage():
+    def test_login(self):
+        """
+        测试登录
+        :return:
+        """
+        LoginPage().login()

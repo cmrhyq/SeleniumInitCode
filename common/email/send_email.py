@@ -22,7 +22,7 @@ from smtplib import SMTP, SMTP_SSL
 from common.log import Logger
 from config.read_config import ReadConfig
 
-logger = Logger(name="email").get_logger()
+logger = Logger().get_logger()
 
 
 class SendEmail:
