@@ -1,10 +1,13 @@
 from selenium.webdriver.common.by import By
+
+from common.log import Logger
 from test.page.base_page import BasePage
 
 
 class LoginPage(BasePage):
     def __init__(self):
         super().__init__()
+        self.logger = Logger().get_logger()
 
     def index_login_button(self):
         """

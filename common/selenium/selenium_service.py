@@ -30,7 +30,7 @@ class SeleniumService:
     """Selenium 服务类，提供浏览器自动化操作"""
 
     def __init__(self):
-        self.logger = Logger(name="selenium").get_logger()
+        self.logger = Logger().get_logger()
         self.browser = None
 
     @log_execution(level="INFO")
@@ -297,7 +297,7 @@ class SeleniumService:
         self.browser.reload()
 
     # 截图
-    def screen_page(self, file_path=None):
+    def screen_page(self, file_path="./resource/screenshot/", file_name="screenshot"):
         """
         截取当前页面的屏幕截图并保存到指定路径。
 
@@ -306,9 +306,7 @@ class SeleniumService:
 
         无返回值。
         """
-        # 如果未提供文件路径，默认保存为'screenshot.png'在当前目录下
-        if not file_path:
-            file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "\\resource\\image\\screenshot\\screenshot.png")
+        file_path = f"{file_path}{file_name}.png"
         # 获取文件扩展名
         file_extension = os.path.splitext(file_path)[1][1:]
         # 如果不是png格式，转换成png
@@ -394,3 +392,7 @@ class SeleniumService:
         element = self.browser.find_element(selector_type, selector_element)
         child_element_count = len(element.find_elements(selector_type, "./child::*"))
         return child_element_count
+
+
+if __name__ == '__main__':
+    print(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
