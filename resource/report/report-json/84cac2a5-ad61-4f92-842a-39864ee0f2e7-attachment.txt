@@ -1,0 +1,54 @@
+[32m2025-04-20 21:04:17.945[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m103[0m | [1m开始执行函数: start_browser[0m
+[32m2025-04-20 21:04:17.946[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m104[0m | [1m参数: args=(<common.selenium.selenium_service.SeleniumService object at 0x0000022B28837A10>, SeleniumBase(is_headless=False, is_cdp=True, is_dev=True, proxy=True, proxy_value='127.0.0.1:7890', driver=None)), kwargs={}[0m
+[32m2025-04-20 21:04:17.946[0m | [1mINFO    [0m | [36mcommon.selenium.selenium_service[0m:[36mstart_browser[0m:[36m46[0m | [1m启动CDP模式[0m
+[32m2025-04-20 21:04:17.946[0m | [1mINFO    [0m | [36mcommon.selenium.selenium_service[0m:[36mstart_browser[0m:[36m51[0m | [1m设置代理: 127.0.0.1:7890[0m
+[32m2025-04-20 21:04:20.955[0m | [34m[1mDEBUG   [0m | [36mcommon.selenium.selenium_service[0m:[36mstart_browser[0m:[36m58[0m | [34m[1m使用User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36[0m
+[32m2025-04-20 21:04:22.097[0m | [1mINFO    [0m | [36mcommon.selenium.selenium_service[0m:[36mstart_browser[0m:[36m73[0m | [1m浏览器启动成功[0m
+[32m2025-04-20 21:04:22.097[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m109[0m | [1m函数 start_browser 执行成功，耗时: 4.150秒[0m
+[32m2025-04-20 21:04:24.719[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m103[0m | [1m开始执行函数: click[0m
+[32m2025-04-20 21:04:24.719[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m104[0m | [1m参数: args=(<common.selenium.selenium_service.SeleniumService object at 0x0000022B28837A10>, 'xpath', '//*[@id="left-menu"]/div/div[1]/div[2]/button'), kwargs={}[0m
+[32m2025-04-20 21:04:24.719[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m103[0m | [1m开始执行函数: find_element[0m
+[32m2025-04-20 21:04:24.719[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m104[0m | [1m参数: args=(<common.selenium.selenium_service.SeleniumService object at 0x0000022B28837A10>, 'xpath', '//*[@id="left-menu"]/div/div[1]/div[2]/button'), kwargs={}[0m
+[32m2025-04-20 21:04:24.728[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m109[0m | [1m函数 find_element 执行成功，耗时: 0.009秒[0m
+[32m2025-04-20 21:04:24.793[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m109[0m | [1m函数 click 执行成功，耗时: 0.074秒[0m
+[32m2025-04-20 21:04:25.794[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m103[0m | [1m开始执行函数: click[0m
+[32m2025-04-20 21:04:25.794[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m104[0m | [1m参数: args=(<common.selenium.selenium_service.SeleniumService object at 0x0000022B28837A10>, 'xpath', '/html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button'), kwargs={}[0m
+[32m2025-04-20 21:04:25.794[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m103[0m | [1m开始执行函数: find_element[0m
+[32m2025-04-20 21:04:25.794[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m104[0m | [1m参数: args=(<common.selenium.selenium_service.SeleniumService object at 0x0000022B28837A10>, 'xpath', '/html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button'), kwargs={}[0m
+[32m2025-04-20 21:04:25.803[0m | [31m[1mERROR   [0m | [36mcommon.selenium.selenium_service[0m:[36mfind_element[0m:[36m196[0m | [31m[1m未找到匹配的元素: /html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button[0m
+[32m2025-04-20 21:04:25.803[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m109[0m | [1m函数 find_element 执行成功，耗时: 0.009秒[0m
+[32m2025-04-20 21:04:25.804[0m | [31m[1mERROR   [0m | [36mcommon.selenium.selenium_service[0m:[36mclick[0m:[36m346[0m | [31m[1m未找到元素: /html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button[0m
+[32m2025-04-20 21:04:25.804[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m109[0m | [1m函数 click 执行成功，耗时: 0.010秒[0m
+[32m2025-04-20 21:04:26.805[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m103[0m | [1m开始执行函数: send_keys[0m
+[32m2025-04-20 21:04:26.805[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m104[0m | [1m参数: args=(<common.selenium.selenium_service.SeleniumService object at 0x0000022B28837A10>, 'id', 'desktop-login-account'), kwargs={'input_content': 'test_user'}[0m
+[32m2025-04-20 21:04:26.805[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m103[0m | [1m开始执行函数: find_element[0m
+[32m2025-04-20 21:04:26.805[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m104[0m | [1m参数: args=(<common.selenium.selenium_service.SeleniumService object at 0x0000022B28837A10>, 'id', 'desktop-login-account'), kwargs={}[0m
+[32m2025-04-20 21:04:26.812[0m | [31m[1mERROR   [0m | [36mcommon.selenium.selenium_service[0m:[36mfind_element[0m:[36m196[0m | [31m[1m未找到匹配的元素: desktop-login-account[0m
+[32m2025-04-20 21:04:26.812[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m109[0m | [1m函数 find_element 执行成功，耗时: 0.006秒[0m
+[32m2025-04-20 21:04:26.813[0m | [31m[1mERROR   [0m | [36mcommon.selenium.selenium_service[0m:[36msend_keys[0m:[36m216[0m | [31m[1m未找到元素: desktop-login-account[0m
+[32m2025-04-20 21:04:26.813[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m109[0m | [1m函数 send_keys 执行成功，耗时: 0.008秒[0m
+[32m2025-04-20 21:04:27.813[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m103[0m | [1m开始执行函数: send_keys[0m
+[32m2025-04-20 21:04:27.813[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m104[0m | [1m参数: args=(<common.selenium.selenium_service.SeleniumService object at 0x0000022B28837A10>, 'id', 'desktop-login-pwd'), kwargs={'input_content': 'test_password'}[0m
+[32m2025-04-20 21:04:27.813[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m103[0m | [1m开始执行函数: find_element[0m
+[32m2025-04-20 21:04:27.813[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m104[0m | [1m参数: args=(<common.selenium.selenium_service.SeleniumService object at 0x0000022B28837A10>, 'id', 'desktop-login-pwd'), kwargs={}[0m
+[32m2025-04-20 21:04:27.820[0m | [31m[1mERROR   [0m | [36mcommon.selenium.selenium_service[0m:[36mfind_element[0m:[36m196[0m | [31m[1m未找到匹配的元素: desktop-login-pwd[0m
+[32m2025-04-20 21:04:27.820[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m109[0m | [1m函数 find_element 执行成功，耗时: 0.006秒[0m
+[32m2025-04-20 21:04:27.820[0m | [31m[1mERROR   [0m | [36mcommon.selenium.selenium_service[0m:[36msend_keys[0m:[36m216[0m | [31m[1m未找到元素: desktop-login-pwd[0m
+[32m2025-04-20 21:04:27.821[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m109[0m | [1m函数 send_keys 执行成功，耗时: 0.008秒[0m
+[32m2025-04-20 21:04:28.821[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m103[0m | [1m开始执行函数: click[0m
+[32m2025-04-20 21:04:28.821[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m104[0m | [1m参数: args=(<common.selenium.selenium_service.SeleniumService object at 0x0000022B28837A10>, 'xpath', '/html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1]'), kwargs={}[0m
+[32m2025-04-20 21:04:28.821[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m103[0m | [1m开始执行函数: find_element[0m
+[32m2025-04-20 21:04:28.821[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m104[0m | [1m参数: args=(<common.selenium.selenium_service.SeleniumService object at 0x0000022B28837A10>, 'xpath', '/html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1]'), kwargs={}[0m
+[32m2025-04-20 21:04:28.828[0m | [31m[1mERROR   [0m | [36mcommon.selenium.selenium_service[0m:[36mfind_element[0m:[36m196[0m | [31m[1m未找到匹配的元素: /html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1][0m
+[32m2025-04-20 21:04:28.829[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m109[0m | [1m函数 find_element 执行成功，耗时: 0.008秒[0m
+[32m2025-04-20 21:04:28.829[0m | [31m[1mERROR   [0m | [36mcommon.selenium.selenium_service[0m:[36mclick[0m:[36m346[0m | [31m[1m未找到元素: /html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1][0m
+[32m2025-04-20 21:04:28.829[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m109[0m | [1m函数 click 执行成功，耗时: 0.008秒[0m
+[32m2025-04-20 21:04:29.831[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m103[0m | [1m开始执行函数: click[0m
+[32m2025-04-20 21:04:29.831[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m104[0m | [1m参数: args=(<common.selenium.selenium_service.SeleniumService object at 0x0000022B28837A10>, 'id', 'desktop-login-policy'), kwargs={}[0m
+[32m2025-04-20 21:04:29.831[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m103[0m | [1m开始执行函数: find_element[0m
+[32m2025-04-20 21:04:29.831[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m104[0m | [1m参数: args=(<common.selenium.selenium_service.SeleniumService object at 0x0000022B28837A10>, 'id', 'desktop-login-policy'), kwargs={}[0m
+[32m2025-04-20 21:04:29.839[0m | [31m[1mERROR   [0m | [36mcommon.selenium.selenium_service[0m:[36mfind_element[0m:[36m196[0m | [31m[1m未找到匹配的元素: desktop-login-policy[0m
+[32m2025-04-20 21:04:29.839[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m109[0m | [1m函数 find_element 执行成功，耗时: 0.008秒[0m
+[32m2025-04-20 21:04:29.839[0m | [31m[1mERROR   [0m | [36mcommon.selenium.selenium_service[0m:[36mclick[0m:[36m346[0m | [31m[1m未找到元素: desktop-login-policy[0m
+[32m2025-04-20 21:04:29.839[0m | [1mINFO    [0m | [36mcommon.log.logger[0m:[36mwrapper[0m:[36m109[0m | [1m函数 click 执行成功，耗时: 0.008秒[0m
+[32m2025-04-20 21:04:30.840[0m | [1mINFO    [0m | [36mcommon.selenium.selenium_service[0m:[36mscreen_page[0m:[36m318[0m | [1m截图保存路径: ./resource/screenshot/screenshot_20250420210430.png[0m
