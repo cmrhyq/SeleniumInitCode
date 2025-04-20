@@ -4,42 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b84648b-6285-4447-805c-948a7bd14773" name="Changes" comment="日志">
-      <change afterPath="$PROJECT_DIR$/.idea/UiAutomationTestInit.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patterns/singleton/selenium_service_singleton.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PythonSceneConfigState.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SeleniumInitCode.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/selenium/selenium_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/selenium/selenium_service_normal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/patterns/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/decorator/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/patterns/decorator/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/decorator/retry.py" beforeDir="false" afterPath="$PROJECT_DIR$/patterns/decorator/retry.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/decorator/timer.py" beforeDir="false" afterPath="$PROJECT_DIR$/patterns/decorator/timer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/factory/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/patterns/factory/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/factory/web_driver_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/patterns/factory/web_driver_factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/singleton/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/patterns/singleton/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/singleton/mysql_singleton.py" beforeDir="false" afterPath="$PROJECT_DIR$/patterns/singleton/mysql_singleton.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/singleton/web_driver_singleton.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/entity/selenium.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/entity/selenium.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/report/report-json/27ead582-1ecd-4da4-ba1a-7dfe8368a55c-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/report/report-json/44010935-1af3-459c-a56f-ed9a6bef1a2e-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/report/report-json/58d7e90b-9ae9-45d5-8c59-ef8b877225b5-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/report/report-json/7eaee21d-3c2a-4a9b-92ae-352229d2af96-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/report/report-json/84cac2a5-ad61-4f92-842a-39864ee0f2e7-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/report/report-json/979b1fc8-9425-4932-b011-2b742859e42a-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/report/report-json/a58ba897-5374-4d85-a60c-4e513c7557ac-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/report/report-json/bf09b8a6-0ef3-4f3b-bbd1-1bd2677747ed-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/report/report-json/c2ca603c-c234-470f-b36b-658401ed4678-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/report/report-json/c3e691cb-106e-4ff0-ba69-e5fec8ea3e45-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/report/report-json/ddae7e36-6435-4abe-91a6-c02d34b598fb-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/report/report-json/ec85de71-2043-4ee0-8913-8e2232ccf2c8-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/report/report-json/ed26d6d0-70ff-46c1-b6c8-53535986ac12-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/report/report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/page/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/page/base_page.py" afterDir="false" />
+    <list default="true" id="3b84648b-6285-4447-805c-948a7bd14773" name="Changes" comment="更新selenium配置实体类名称">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/internet/internet_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/internet/internet_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +27,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.internet_utils.executor": "Run",
     "Python.web_driver_singleton.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -74,7 +41,30 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.internet_utils">
+    <configuration name="internet_utils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="UiAutomationTestInit" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils/internet" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/internet/internet_utils.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="selenium_service_singleton" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="UiAutomationTestInit" />
       <option name="ENV_FILES" value="" />
@@ -100,6 +90,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.internet_utils" />
         <item itemvalue="Python.selenium_service_singleton" />
       </list>
     </recent_temporary>
@@ -120,8 +111,57 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745162416095</updated>
-      <workItem from="1745162417751" duration="4340000" />
+      <workItem from="1745162417751" duration="4665000" />
     </task>
+    <task id="LOCAL-00001" summary="日志">
+      <option name="closed" value="true" />
+      <created>1745167710088</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1745167710088</updated>
+    </task>
+    <task id="LOCAL-00002" summary="日志">
+      <option name="closed" value="true" />
+      <created>1745167717887</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1745167717887</updated>
+    </task>
+    <task id="LOCAL-00003" summary="移动代码位置">
+      <option name="closed" value="true" />
+      <created>1745167733943</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1745167733943</updated>
+    </task>
+    <task id="LOCAL-00004" summary="改名">
+      <option name="closed" value="true" />
+      <created>1745167746831</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1745167746831</updated>
+    </task>
+    <task id="LOCAL-00005" summary="更新">
+      <option name="closed" value="true" />
+      <created>1745167811306</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1745167811306</updated>
+    </task>
+    <task id="LOCAL-00006" summary="更新selenium配置实体类名称">
+      <option name="closed" value="true" />
+      <created>1745167922725</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1745167922725</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,9 +169,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="日志" />
-    <option name="LAST_COMMIT_MESSAGE" value="日志" />
+    <MESSAGE value="移动代码位置" />
+    <MESSAGE value="改名" />
+    <MESSAGE value="更新" />
+    <MESSAGE value="更新selenium配置实体类名称" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新selenium配置实体类名称" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/UiAutomationTestInit$web_driver_singleton.coverage" NAME="web_driver_singleton Coverage Results" MODIFIED="1745166198541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/singleton" />
+    <SUITE FILE_PATH="coverage/UiAutomationTestInit$internet_utils.coverage" NAME="internet_utils Coverage Results" MODIFIED="1745167976256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils/internet" />
   </component>
 </project>
