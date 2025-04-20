@@ -1,2 +1,0 @@
-打开浏览器
-001传入了loging fixture

@@ -5,14 +5,14 @@ from common.log import Logger
 
 logger = Logger().get_logger()
 
-class PostgresDB:
+class MysqlSingleton:
     _instance = None  # 单例实例
     _lock = threading.Lock()  # 线程安全锁
 
-    def __new__(cls, dbname, user, password, host='localhost', port='3306'):
+    def __new__(cls, dbname, user, password, host='localhost', port=3306):
         with cls._lock:  # 确保多线程下只有一个实例
             if cls._instance is None:
-                cls._instance = super(PostgresDB, cls).__new__(cls)
+                cls._instance = super(MysqlSingleton, cls).__new__(cls)
                 cls._instance._initialize(dbname, user, password, host, port)
         return cls._instance
 
@@ -66,7 +66,7 @@ class PostgresDB:
 
 # 使用示例
 if __name__ == "__main__":
-    db = PostgresDB(dbname="testdb", user="admin", password="password")
+    db = MysqlSingleton(dbname="test", user="root", password="Hyq0901.")
 
     # 执行查询
     result = db.execute_query("SELECT * FROM users WHERE id = %s", (1,))

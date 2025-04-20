@@ -1,1 +1,0 @@
-[32mINFO    [0m pytest:conftest.py:47 Starting test: test_case_04[7]
