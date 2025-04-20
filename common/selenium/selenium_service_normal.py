@@ -1,5 +1,5 @@
 """
-@File selenium_service.py
+@File selenium_service_normal.py
 @Contact cmrhyq@163.com
 @License (C)Copyright 2022-2025, AlanHuang
 @Modify Time 2024/6/21 16:15
@@ -15,7 +15,7 @@ import pyperclip
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.common import NoSuchElementException, TimeoutException
-from selenium.webdriver import ActionChains, Keys
+from selenium.webdriver import ActionChains, Keys, Proxy
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
@@ -26,12 +26,14 @@ from utils.internet.internet_utils import get_random_pc_ua
 
 from common.log import Logger, log_execution
 
+logger = Logger().get_logger()
 
-class SeleniumService:
-    """Selenium 服务类，提供浏览器自动化操作"""
+class SeleniumServiceNormal(object):
+    """
+    Selenium 普通服务类，提供浏览器自动化操作
+    """
 
     def __init__(self):
-        self.logger = Logger().get_logger()
         self.browser = None
 
     @log_execution(level="INFO")
@@ -40,22 +42,30 @@ class SeleniumService:
         try:
             option = webdriver.ChromeOptions()
             if config.is_headless:
-                self.logger.info("启动无头模式")
+                logger.info("启动无头模式")
                 option.add_argument('--headless')
             elif config.is_cdp:
-                self.logger.info("启动CDP模式")
+                logger.info("启动CDP模式")
                 option.add_experimental_option('excludeSwitches', ['enable-automation'])
                 option.add_experimental_option('useAutomationExtension', False)
 
             if config.proxy:
-                self.logger.info(f"设置代理: {config.proxy_value}")
-                option.ignore_local_proxy_environment_variables()
-                os.environ['HTTPS_PROXY'] = config.proxy_value
-                os.environ['HTTP_PROXY'] = config.proxy_value
+                logger.info(f"设置代理: {config.proxy}")
+                # 旧方法，selenium弃用了
+                # option.ignore_local_proxy_environment_variables()
+                # os.environ['HTTPS_PROXY'] = config.proxy
+                # os.environ['HTTP_PROXY'] = config.proxy
+                # 新设置代理的方法
+                settings = {
+                    "httpProxy": config.proxy,
+                    "httpsProxy": config.proxy,
+                    "sslProxy": config.proxy,
+                }
+                Proxy(settings)
 
             service = Service(config.driver or ChromeDriverManager().install())
             ua = get_random_pc_ua()
-            self.logger.debug(f"使用User-Agent: {ua}")
+            logger.debug(f"使用User-Agent: {ua}")
             option.add_argument(f'user-agent={ua}')
 
             self.browser = webdriver.Chrome(service=service, options=option)
@@ -70,18 +80,18 @@ class SeleniumService:
                     """
                 })
 
-            self.logger.info("浏览器启动成功")
+            logger.info("浏览器启动成功")
             return self.browser
 
         except Exception as e:
-            self.logger.error(f"浏览器启动失败: {str(e)}")
+            logger.error(f"浏览器启动失败: {str(e)}")
             raise
 
     @log_execution(level="INFO")
     def locate_and_operate_element(self, options: LocateElementOptions):
         """定位元素并执行操作"""
         try:
-            self.logger.debug(f"开始定位元素: {options.by}={options.value}")
+            logger.debug(f"开始定位元素: {options.by}={options.value}")
 
             if not isinstance(options.wait, WebDriverWait):
                 raise ValueError("wait 参数必须是 WebDriverWait 类型")
@@ -93,31 +103,31 @@ class SeleniumService:
             if not options.method:
                 if options.is_more:
                     elements = options.wait.until(ec.presence_of_all_elements_located((options.by, options.value)))
-                    self.logger.debug(f"找到 {len(elements)} 个元素")
+                    logger.debug(f"找到 {len(elements)} 个元素")
                     return elements
                 if options.check_visibility:
                     return options.wait.until(ec.visibility_of_element_located((options.by, options.value)))
                 return element
 
             if options.method == LocateElementMethod.CLICK:
-                self.logger.debug(f"点击元素: {options.by}={options.value}")
+                logger.debug(f"点击元素: {options.by}={options.value}")
                 options.wait.until(ec.element_to_be_clickable((options.by, options.value))).click()
                 time.sleep(2)
             elif options.method == LocateElementMethod.INPUT:
                 if not options.key:
                     raise ValueError("输入操作必须提供key参数")
-                self.logger.debug(f"输入内容: {options.key}")
+                logger.debug(f"输入内容: {options.key}")
                 options.wait.until(ec.visibility_of_element_located((options.by, options.value)))
                 self._safe_input(element, options.key)
 
         except TimeoutException:
-            self.logger.error(f"元素定位超时: {options.by}={options.value}")
+            logger.error(f"元素定位超时: {options.by}={options.value}")
             return None
         except NoSuchElementException:
-            self.logger.error(f"元素不存在: {options.by}={options.value}")
+            logger.error(f"元素不存在: {options.by}={options.value}")
             return None
         except Exception as e:
-            self.logger.error(f"元素操作失败: {str(e)}")
+            logger.error(f"元素操作失败: {str(e)}")
             return None
 
     def _safe_input(self, element, text):
@@ -132,7 +142,7 @@ class SeleniumService:
             element.send_keys(Keys.CONTROL, 'V')
             time.sleep(0.2)
         except Exception as e:
-            self.logger.error(f"输入文本失败: {str(e)}")
+            logger.error(f"输入文本失败: {str(e)}")
             raise
 
     # 启动页面
@@ -193,7 +203,7 @@ class SeleniumService:
             return element
         except NoSuchElementException:
             # 处理元素未找到的情况
-            self.logger.error(f"未找到匹配的元素: {selector_element}")
+            logger.error(f"未找到匹配的元素: {selector_element}")
             return None  # 或者你可以选择抛出自定义的异常，或者返回其他默认值
 
     # 输入框 输入内容并提交
@@ -213,7 +223,7 @@ class SeleniumService:
         if input_element:
             input_element.send_keys(input_content)  # 输入文本内容
         else:
-            self.logger.error(f"未找到元素: {selector_element}")
+            logger.error(f"未找到元素: {selector_element}")
 
     # 执行js命令
     def execute_script(self, script_command):
@@ -315,7 +325,7 @@ class SeleniumService:
             file_path = os.path.splitext(file_path)[0] + '.png'
 
         # 截取屏幕截图并保存
-        self.logger.info(f"截图保存路径: {file_path}")
+        logger.info(f"截图保存路径: {file_path}")
         self.browser.save_screenshot(file_path)
 
     # 关闭浏览器
@@ -343,7 +353,7 @@ class SeleniumService:
         if element:
             element.click()  # 点击元素
         else:
-            self.logger.error(f"未找到元素: {selector_element}")
+            logger.error(f"未找到元素: {selector_element}")
 
     # 拉拽动作
     def drag_and_drop(self, source_element, target_element):
