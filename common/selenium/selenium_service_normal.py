@@ -20,7 +20,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 
-from model.entity.selenium import SeleniumBase, LocateElementOptions
+from model.entity.selenium import SeleniumConfig, LocateElementOptions
 from model.enum.enums import LocateElementMethod
 from utils.internet.internet_utils import get_random_pc_ua
 
@@ -37,7 +37,7 @@ class SeleniumServiceNormal(object):
         self.browser = None
 
     @log_execution(level="INFO")
-    def start_browser(self, config: SeleniumBase) -> webdriver.Chrome:
+    def start_browser(self, config: SeleniumConfig) -> webdriver.Chrome:
         """启动 Chrome 浏览器"""
         try:
             option = webdriver.ChromeOptions()

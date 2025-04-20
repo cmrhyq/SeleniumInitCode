@@ -6,7 +6,7 @@ from model.enum.enums import LocateElementMethod
 
 
 @dataclass
-class SeleniumBase(object):
+class SeleniumConfig(object):
     """
     is_headless (bool, optional): 是否开启无头模式。默认为 False。
     is_cdp (bool, optional): 是否使用 Chrome Devtools Protocol。默认为 True。

@@ -1,13 +1,13 @@
 from common.selenium.selenium_service_normal import SeleniumServiceNormal
 from config.read_config import ReadConfig
-from model.entity.selenium import SeleniumBase
+from model.entity.selenium import SeleniumConfig
 from utils.time.time_utils import sleep
 
 
 class BasePage(SeleniumServiceNormal):
     def __init__(self):
         super().__init__()
-        config = SeleniumBase(
+        config = SeleniumConfig(
             is_headless=False,
             is_cdp=True,
             is_dev=True,

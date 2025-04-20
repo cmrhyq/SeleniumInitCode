@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
 from common.log import Logger, log_execution
-from model.entity.selenium import SeleniumBase
+from model.entity.selenium import SeleniumConfig
 from utils.internet.internet_utils import get_random_pc_ua
 
 
@@ -23,7 +23,7 @@ class SeleniumServiceSingleton:
     _instance = None
     _lock = threading.Lock()
 
-    def __new__(cls, config: SeleniumBase):
+    def __new__(cls, config: SeleniumConfig):
         with cls._lock:
             if cls._instance is None:
                 cls._instance = super(SeleniumServiceSingleton, cls).__new__(cls)
@@ -99,13 +99,13 @@ class SeleniumServiceSingleton:
 
 # 示例
 if __name__ == "__main__":
-    driver1 = SeleniumServiceSingleton(SeleniumBase(
+    driver1 = SeleniumServiceSingleton(SeleniumConfig(
         is_headless=False,
         is_cdp=True,
         is_dev=True,
         proxy="127.0.0.1:7890"
     )).get_driver()
-    driver2 = SeleniumServiceSingleton(SeleniumBase(
+    driver2 = SeleniumServiceSingleton(SeleniumConfig(
         is_headless=False,
         is_cdp=True,
         is_dev=True,
