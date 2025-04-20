@@ -18,6 +18,7 @@ def create_logger(log_file_path=None):
     )
 
     if not log_file_path:
+        # timestamp = datetime.now().strftime("%Y-%m-%d")
         timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         log_dir = Path("./logs")
         log_dir.mkdir(exist_ok=True)
@@ -63,6 +64,7 @@ def pytest_configure(config):
     })
 
     # 设置日志文件路径
+    # time_now = datetime.now().strftime('%Y%m%d')
     time_now = datetime.now().strftime('%Y%m%d%H%M%S')
     config.option.log_file = os.path.join(config.rootdir, 'logs', f'pytest_{time_now}.log')
 
