@@ -9,6 +9,7 @@
 """
 import os
 import time
+from datetime import datetime
 
 import pyperclip
 from selenium import webdriver
@@ -159,7 +160,7 @@ class SeleniumService:
         time.sleep(timeout)
 
     # 查找多个元素
-    def find_elements(self, selector_element, selector_type=None):
+    def find_elements(self, selector_type, selector_element):
         # 传了selector_type就获取 没传就通过selector_element进行解析
 
         """
@@ -176,7 +177,7 @@ class SeleniumService:
 
     # 查找元素
     @log_execution(level="INFO")
-    def find_element(self, selector_type=None, selector_element=None):
+    def find_element(self, selector_type, selector_element):
         """
         查找单个元素。
 
@@ -197,18 +198,18 @@ class SeleniumService:
 
     # 输入框 输入内容并提交
     @log_execution(level="INFO")
-    def send_keys(self, selector_element, input_content, selector_type=None):
+    def send_keys(self, selector_type, selector_element, input_content):
         """
         在指定的选择器位置输入文本内容。
 
         参数:
+        selector_type (str, optional): 选择器类型（例如 'css', 'xpath' 等）。
         selector_element (str): 要输入文本的元素选择器。
         input_content (str): 要输入的文本内容。
-        selector_type (str, optional): 选择器类型（例如 'css', 'xpath' 等）。
 
         无返回值。
         """
-        input_element = self.find_element(selector_element, selector_type)  # 查找输入框元素
+        input_element = self.find_element(selector_type, selector_element)  # 查找输入框元素
         if input_element:
             input_element.send_keys(input_content)  # 输入文本内容
         else:
@@ -306,7 +307,7 @@ class SeleniumService:
 
         无返回值。
         """
-        file_path = f"{file_path}{file_name}.png"
+        file_path = f"{file_path}{file_name}_{datetime.now().strftime('%Y%m%d%H%M%S')}.png"
         # 获取文件扩展名
         file_extension = os.path.splitext(file_path)[1][1:]
         # 如果不是png格式，转换成png
@@ -328,7 +329,7 @@ class SeleniumService:
 
 
     @log_execution(level="INFO")
-    def click(self, selector_element, selector_type=None):
+    def click(self, selector_type, selector_element):
         """
         在页面上点击指定的元素。
 
@@ -338,7 +339,7 @@ class SeleniumService:
 
         无返回值。
         """
-        element = self.find_element(selector_element, selector_type)  # 查找要点击的元素
+        element = self.find_element(selector_type, selector_element)  # 查找要点击的元素
         if element:
             element.click()  # 点击元素
         else:
@@ -382,7 +383,7 @@ class SeleniumService:
         """
         return self.browser.page_source
 
-    def get_child_element_count(self, selector_element, selector_type=None):
+    def get_child_element_count(self, selector_type, selector_element):
         """
         获取当前元素的子元素数量
         :param selector_element: (str): 要查找的元素选择器。
