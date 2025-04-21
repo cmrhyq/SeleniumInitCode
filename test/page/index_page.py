@@ -18,7 +18,7 @@ class IndexPage(BasePage):
 
     def search(self):
         self.driver.send_keys(*self.search_input_element, input_content=Keys.ENTER)
-        sleep(5)
+        sleep(6)
 
     def screenshot(self):
         self.driver.screen_page()
