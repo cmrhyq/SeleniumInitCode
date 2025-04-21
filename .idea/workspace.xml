@@ -4,7 +4,69 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b84648b-6285-4447-805c-948a7bd14773" name="Changes" comment="更新获取pc端ua和phone端ua的方法">
+    <list default="true" id="3b84648b-6285-4447-805c-948a7bd14773" name="Changes" comment="测试报告">
+      <change afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/pytest_20250421234910.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/pytest_20250421234956.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/pytest_20250421235337.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/pytest_20250421235546.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/042ffb06-b0d7-42ca-942d-46cef0e362d9-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/07222bc4-a21d-44a5-a891-0710dcfacf0f-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/0b60aa1c-6436-4293-aba6-01297752f611-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/0de772e0-d06f-4751-9d1b-c67dd2cf1b3f-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/1b8c2354-e5b8-4251-a0fe-3071ee12ca25-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/1daca718-e442-4add-a14a-3422daa6a622-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/23b3b886-4d59-4561-b181-9a5c34da403d-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/2bddba35-f3a6-43c5-b470-8125d46e5fec-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/2c074098-c829-44d9-9d29-4b905b00809d-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/4a366cba-bb92-4c5f-b95f-540a3a48261c-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/4c9bf7b8-5171-440b-8bb6-84afe282e320-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/5007818b-8a48-43e5-a31a-40ac87f1335b-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/531898e2-1465-4142-b336-8b116502ca51-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/533a39e3-4e60-4736-ade7-58052b49e6f6-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/534eb994-e263-4cdc-a605-7700de0a4833-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/5535de13-4f96-4266-8ca5-977e93c72d76-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/5700fdb0-9c26-41af-91ad-4cc9d421287a-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/57f23f6e-159e-4d9c-956b-071d3d13c753-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/65c4cbd9-b045-44bf-8561-22c0c2bf58ec-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/6685f6e7-337a-4385-a584-183f37cb8c0a-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/70e2f794-b435-4630-a09a-ce37944e38ba-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/72d3bbf3-56a0-46d6-b434-8ddeb42b6d13-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/781b9171-816b-49c8-8147-28fb2883a66e-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/78bfd250-b424-428c-8dc7-d4638280cb47-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/7e6686b5-1657-455b-b0e5-a84dbe8d7e13-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/85d5c419-de31-48f5-ab77-91fad955dd08-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/8d0fcd5b-2960-46aa-b66d-78cc0ec668a9-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/9681a64c-d57c-43ad-b75a-94155aacb329-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/a471c21e-1b73-46be-a7d6-2148c5db5a0d-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/a5716f61-3ab9-4702-9df5-d8ebdf52c39e-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/b3b52608-da06-407b-8cfe-110a1f660d61-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/b49f43a3-b3dc-46a8-b3a7-5ad731d8a1c3-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/bf76e0f6-0705-45d9-a9e2-b22bcfb5f21d-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/c684ce59-994e-4c74-b75a-8b4bcc52b986-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/d027db95-5bff-4054-95cb-1b1ee862c31d-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/d52db18b-49cf-40bb-a24b-f81a44dae3b4-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/d7a12b62-95dc-4902-8e9b-52db25c56ba0-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/df1c606c-d795-47b5-966c-ef9b19ee27e6-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/df8e447f-c492-4540-8fb3-1f6357fc0d39-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/e3ffa39d-a761-4fb6-9e27-adaeddb8e7b9-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/e5883aea-b3c0-45d2-8206-fe22692240f0-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/e7c24a37-9a8b-43fd-a48e-796723670391-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/e953f582-8cda-42a9-8301-b9cb284d4d6f-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/ec034c40-9fe9-4026-ba0c-c3e3c53d9395-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/eeee02a0-2f87-481d-85cc-61dd516d2755-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/f2f22243-4b62-4fc5-b41e-e333ebfa12c1-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/f93a59a8-d3d8-4a8c-8a4f-e6002dd8ce38-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/fcfe2962-8a70-47be-ab5a-8ace09797739-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report-json/fe194989-32f1-4bae-a2a3-165e8bda499b-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/report/report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/screenshot/screenshot_20250421235006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/screenshot/screenshot_20250421235023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/screenshot/screenshot_20250421235349.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/screenshot/screenshot_20250421235402.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/screenshot/screenshot_20250421235416.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/screenshot/screenshot_20250421235429.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/screenshot/screenshot_20250421235441.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/case/test_index.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/case/test_index.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/case/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/case/test_login.py" afterDir="false" />
@@ -114,7 +176,7 @@
       <option name="presentableId" value="Default" />
       <updated>1745162416095</updated>
       <workItem from="1745162417751" duration="4975000" />
-      <workItem from="1745249865531" duration="1034000" />
+      <workItem from="1745249865531" duration="1393000" />
     </task>
     <task id="LOCAL-00001" summary="日志">
       <option name="closed" value="true" />
@@ -185,7 +247,8 @@
     <MESSAGE value="更新" />
     <MESSAGE value="更新selenium配置实体类名称" />
     <MESSAGE value="更新获取pc端ua和phone端ua的方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新获取pc端ua和phone端ua的方法" />
+    <MESSAGE value="测试报告" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试报告" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/UiAutomationTestInit$web_driver_singleton.coverage" NAME="web_driver_singleton Coverage Results" MODIFIED="1745166198541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/singleton" />
