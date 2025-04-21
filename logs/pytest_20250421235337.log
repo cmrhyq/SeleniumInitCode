@@ -1,0 +1,30 @@
+2025-04-21 23:53:38 --> conftest.py [line:48 ] --> INFO  --> Starting test: test_search[\u6d4b\u8bd5\u662f\u4ec0\u4e48]
+2025-04-21 23:53:38 --> logger.py  [line:11 ] --> INFO  --> ====== WebDriver manager ======
+2025-04-21 23:53:39 --> logger.py  [line:11 ] --> INFO  --> Get LATEST chromedriver version for google-chrome
+2025-04-21 23:53:39 --> logger.py  [line:11 ] --> INFO  --> Get LATEST chromedriver version for google-chrome
+2025-04-21 23:53:39 --> logger.py  [line:11 ] --> INFO  --> Driver [C:\Users\16783\.wdm\drivers\chromedriver\win64\135.0.7049.95\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-21 23:53:49 --> conftest.py [line:54 ] --> INFO  --> Test completed: test_search[\u6d4b\u8bd5\u662f\u4ec0\u4e48], Result: PASSED
+2025-04-21 23:53:49 --> conftest.py [line:48 ] --> INFO  --> Starting test: test_search[pytest\u7684\u7528\u6cd5]
+2025-04-21 23:53:49 --> logger.py  [line:11 ] --> INFO  --> ====== WebDriver manager ======
+2025-04-21 23:53:50 --> logger.py  [line:11 ] --> INFO  --> Get LATEST chromedriver version for google-chrome
+2025-04-21 23:53:52 --> logger.py  [line:11 ] --> INFO  --> Get LATEST chromedriver version for google-chrome
+2025-04-21 23:53:52 --> logger.py  [line:11 ] --> INFO  --> Driver [C:\Users\16783\.wdm\drivers\chromedriver\win64\135.0.7049.95\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-21 23:54:02 --> conftest.py [line:54 ] --> INFO  --> Test completed: test_search[pytest\u7684\u7528\u6cd5], Result: PASSED
+2025-04-21 23:54:02 --> conftest.py [line:48 ] --> INFO  --> Starting test: test_search[selenium\u7684\u4f7f\u7528]
+2025-04-21 23:54:02 --> logger.py  [line:11 ] --> INFO  --> ====== WebDriver manager ======
+2025-04-21 23:54:03 --> logger.py  [line:11 ] --> INFO  --> Get LATEST chromedriver version for google-chrome
+2025-04-21 23:54:06 --> logger.py  [line:11 ] --> INFO  --> Get LATEST chromedriver version for google-chrome
+2025-04-21 23:54:06 --> logger.py  [line:11 ] --> INFO  --> Driver [C:\Users\16783\.wdm\drivers\chromedriver\win64\135.0.7049.95\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-21 23:54:16 --> conftest.py [line:54 ] --> INFO  --> Test completed: test_search[selenium\u7684\u4f7f\u7528], Result: PASSED
+2025-04-21 23:54:16 --> conftest.py [line:48 ] --> INFO  --> Starting test: test_login[test_user-test_password]
+2025-04-21 23:54:16 --> logger.py  [line:11 ] --> INFO  --> ====== WebDriver manager ======
+2025-04-21 23:54:17 --> logger.py  [line:11 ] --> INFO  --> Get LATEST chromedriver version for google-chrome
+2025-04-21 23:54:20 --> logger.py  [line:11 ] --> INFO  --> Get LATEST chromedriver version for google-chrome
+2025-04-21 23:54:20 --> logger.py  [line:11 ] --> INFO  --> Driver [C:\Users\16783\.wdm\drivers\chromedriver\win64\135.0.7049.95\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-21 23:54:29 --> conftest.py [line:54 ] --> INFO  --> Test completed: test_login[test_user-test_password], Result: FAILED
+2025-04-21 23:54:29 --> conftest.py [line:48 ] --> INFO  --> Starting test: test_login[-test_password]
+2025-04-21 23:54:29 --> logger.py  [line:11 ] --> INFO  --> ====== WebDriver manager ======
+2025-04-21 23:54:30 --> logger.py  [line:11 ] --> INFO  --> Get LATEST chromedriver version for google-chrome
+2025-04-21 23:54:32 --> logger.py  [line:11 ] --> INFO  --> Get LATEST chromedriver version for google-chrome
+2025-04-21 23:54:32 --> logger.py  [line:11 ] --> INFO  --> Driver [C:\Users\16783\.wdm\drivers\chromedriver\win64\135.0.7049.95\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-21 23:54:41 --> conftest.py [line:54 ] --> INFO  --> Test completed: test_login[-test_password], Result: FAILED

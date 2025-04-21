@@ -1,0 +1,295 @@
+2025-04-21 23:49:56.474 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: start_browser
+2025-04-21 23:49:56.475 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD6AE10>, SeleniumConfig(is_headless=False, is_cdp=True, is_dev=True, proxy='127.0.0.1:7890', driver=None)), kwargs={}
+2025-04-21 23:49:56.475 | INFO     | common.selenium.selenium_service_normal:start_browser:48 | 启动CDP模式
+2025-04-21 23:49:56.476 | INFO     | common.selenium.selenium_service_normal:start_browser:53 | 设置代理: 127.0.0.1:7890
+2025-04-21 23:49:57.579 | DEBUG    | common.selenium.selenium_service_normal:start_browser:68 | 使用User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.319.74 Safari/537.36 Edg/102.0.319.74
+2025-04-21 23:49:58.875 | INFO     | common.selenium.selenium_service_normal:start_browser:83 | 浏览器启动成功
+2025-04-21 23:49:58.875 | INFO     | common.log.logger:wrapper:109 | 函数 start_browser 执行成功，耗时: 2.399秒
+2025-04-21 23:50:00.442 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: click
+2025-04-21 23:50:00.442 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD6AE10>, 'xpath', '//*[@id="left-menu"]/div/div[1]/div[2]/button'), kwargs={}
+2025-04-21 23:50:00.444 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:50:00.444 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD6AE10>, 'xpath', '//*[@id="left-menu"]/div/div[1]/div[2]/button'), kwargs={}
+2025-04-21 23:50:00.458 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.013秒
+2025-04-21 23:50:00.541 | INFO     | common.log.logger:wrapper:109 | 函数 click 执行成功，耗时: 0.098秒
+2025-04-21 23:50:01.542 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: click
+2025-04-21 23:50:01.542 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD6AE10>, 'xpath', '/html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button'), kwargs={}
+2025-04-21 23:50:01.542 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:50:01.542 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD6AE10>, 'xpath', '/html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button'), kwargs={}
+2025-04-21 23:50:01.552 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: /html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button
+2025-04-21 23:50:01.552 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.011秒
+2025-04-21 23:50:01.552 | ERROR    | common.selenium.selenium_service_normal:click:356 | 未找到元素: /html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button
+2025-04-21 23:50:01.553 | INFO     | common.log.logger:wrapper:109 | 函数 click 执行成功，耗时: 0.012秒
+2025-04-21 23:50:02.554 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: send_keys
+2025-04-21 23:50:02.554 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD6AE10>, 'id', 'desktop-login-account'), kwargs={'input_content': 'test_user'}
+2025-04-21 23:50:02.554 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:50:02.554 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD6AE10>, 'id', 'desktop-login-account'), kwargs={}
+2025-04-21 23:50:02.562 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: desktop-login-account
+2025-04-21 23:50:02.562 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.008秒
+2025-04-21 23:50:02.562 | ERROR    | common.selenium.selenium_service_normal:send_keys:226 | 未找到元素: desktop-login-account
+2025-04-21 23:50:02.563 | INFO     | common.log.logger:wrapper:109 | 函数 send_keys 执行成功，耗时: 0.009秒
+2025-04-21 23:50:03.564 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: send_keys
+2025-04-21 23:50:03.564 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD6AE10>, 'id', 'desktop-login-pwd'), kwargs={'input_content': 'test_password'}
+2025-04-21 23:50:03.564 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:50:03.564 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD6AE10>, 'id', 'desktop-login-pwd'), kwargs={}
+2025-04-21 23:50:03.571 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: desktop-login-pwd
+2025-04-21 23:50:03.571 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.007秒
+2025-04-21 23:50:03.571 | ERROR    | common.selenium.selenium_service_normal:send_keys:226 | 未找到元素: desktop-login-pwd
+2025-04-21 23:50:03.571 | INFO     | common.log.logger:wrapper:109 | 函数 send_keys 执行成功，耗时: 0.007秒
+2025-04-21 23:50:04.572 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: click
+2025-04-21 23:50:04.572 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD6AE10>, 'xpath', '/html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1]'), kwargs={}
+2025-04-21 23:50:04.572 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:50:04.572 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD6AE10>, 'xpath', '/html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1]'), kwargs={}
+2025-04-21 23:50:04.579 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: /html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1]
+2025-04-21 23:50:04.580 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.008秒
+2025-04-21 23:50:04.580 | ERROR    | common.selenium.selenium_service_normal:click:356 | 未找到元素: /html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1]
+2025-04-21 23:50:04.580 | INFO     | common.log.logger:wrapper:109 | 函数 click 执行成功，耗时: 0.008秒
+2025-04-21 23:50:05.581 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: click
+2025-04-21 23:50:05.581 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD6AE10>, 'id', 'desktop-login-policy'), kwargs={}
+2025-04-21 23:50:05.582 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:50:05.582 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD6AE10>, 'id', 'desktop-login-policy'), kwargs={}
+2025-04-21 23:50:05.589 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: desktop-login-policy
+2025-04-21 23:50:05.589 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.007秒
+2025-04-21 23:50:05.590 | ERROR    | common.selenium.selenium_service_normal:click:356 | 未找到元素: desktop-login-policy
+2025-04-21 23:50:05.590 | INFO     | common.log.logger:wrapper:109 | 函数 click 执行成功，耗时: 0.008秒
+2025-04-21 23:50:06.590 | INFO     | common.selenium.selenium_service_normal:screen_page:328 | 截图保存路径: ./resource/screenshot/screenshot_20250421235006.png
+2025-04-21 23:50:06.775 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: start_browser
+2025-04-21 23:50:06.775 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD8B410>, SeleniumConfig(is_headless=False, is_cdp=True, is_dev=True, proxy='127.0.0.1:7890', driver=None)), kwargs={}
+2025-04-21 23:50:06.775 | INFO     | common.selenium.selenium_service_normal:start_browser:48 | 启动CDP模式
+2025-04-21 23:50:06.776 | INFO     | common.selenium.selenium_service_normal:start_browser:53 | 设置代理: 127.0.0.1:7890
+2025-04-21 23:50:14.662 | DEBUG    | common.selenium.selenium_service_normal:start_browser:68 | 使用User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.2805.740 Safari/537.36 OPR/73.0.4287.579
+2025-04-21 23:50:15.720 | INFO     | common.selenium.selenium_service_normal:start_browser:83 | 浏览器启动成功
+2025-04-21 23:50:15.721 | INFO     | common.log.logger:wrapper:109 | 函数 start_browser 执行成功，耗时: 8.947秒
+2025-04-21 23:50:17.393 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: click
+2025-04-21 23:50:17.393 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD8B410>, 'xpath', '//*[@id="left-menu"]/div/div[1]/div[2]/button'), kwargs={}
+2025-04-21 23:50:17.393 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:50:17.393 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD8B410>, 'xpath', '//*[@id="left-menu"]/div/div[1]/div[2]/button'), kwargs={}
+2025-04-21 23:50:17.402 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.009秒
+2025-04-21 23:50:17.471 | INFO     | common.log.logger:wrapper:109 | 函数 click 执行成功，耗时: 0.078秒
+2025-04-21 23:50:18.472 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: click
+2025-04-21 23:50:18.472 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD8B410>, 'xpath', '/html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button'), kwargs={}
+2025-04-21 23:50:18.472 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:50:18.473 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD8B410>, 'xpath', '/html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button'), kwargs={}
+2025-04-21 23:50:18.484 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: /html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button
+2025-04-21 23:50:18.484 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.011秒
+2025-04-21 23:50:18.484 | ERROR    | common.selenium.selenium_service_normal:click:356 | 未找到元素: /html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button
+2025-04-21 23:50:18.484 | INFO     | common.log.logger:wrapper:109 | 函数 click 执行成功，耗时: 0.012秒
+2025-04-21 23:50:19.486 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: send_keys
+2025-04-21 23:50:19.486 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD8B410>, 'id', 'desktop-login-account'), kwargs={'input_content': ''}
+2025-04-21 23:50:19.486 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:50:19.486 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD8B410>, 'id', 'desktop-login-account'), kwargs={}
+2025-04-21 23:50:19.493 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: desktop-login-account
+2025-04-21 23:50:19.494 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.008秒
+2025-04-21 23:50:19.494 | ERROR    | common.selenium.selenium_service_normal:send_keys:226 | 未找到元素: desktop-login-account
+2025-04-21 23:50:19.494 | INFO     | common.log.logger:wrapper:109 | 函数 send_keys 执行成功，耗时: 0.008秒
+2025-04-21 23:50:20.495 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: send_keys
+2025-04-21 23:50:20.495 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD8B410>, 'id', 'desktop-login-pwd'), kwargs={'input_content': 'test_password'}
+2025-04-21 23:50:20.495 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:50:20.495 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD8B410>, 'id', 'desktop-login-pwd'), kwargs={}
+2025-04-21 23:50:20.502 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: desktop-login-pwd
+2025-04-21 23:50:20.503 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.007秒
+2025-04-21 23:50:20.503 | ERROR    | common.selenium.selenium_service_normal:send_keys:226 | 未找到元素: desktop-login-pwd
+2025-04-21 23:50:20.503 | INFO     | common.log.logger:wrapper:109 | 函数 send_keys 执行成功，耗时: 0.008秒
+2025-04-21 23:50:21.504 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: click
+2025-04-21 23:50:21.504 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD8B410>, 'xpath', '/html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1]'), kwargs={}
+2025-04-21 23:50:21.504 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:50:21.504 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD8B410>, 'xpath', '/html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1]'), kwargs={}
+2025-04-21 23:50:21.511 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: /html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1]
+2025-04-21 23:50:21.512 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.008秒
+2025-04-21 23:50:21.512 | ERROR    | common.selenium.selenium_service_normal:click:356 | 未找到元素: /html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1]
+2025-04-21 23:50:21.512 | INFO     | common.log.logger:wrapper:109 | 函数 click 执行成功，耗时: 0.008秒
+2025-04-21 23:50:22.514 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: click
+2025-04-21 23:50:22.514 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD8B410>, 'id', 'desktop-login-policy'), kwargs={}
+2025-04-21 23:50:22.514 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:50:22.514 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000012C2AD8B410>, 'id', 'desktop-login-policy'), kwargs={}
+2025-04-21 23:50:22.521 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: desktop-login-policy
+2025-04-21 23:50:22.521 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.007秒
+2025-04-21 23:50:22.522 | ERROR    | common.selenium.selenium_service_normal:click:356 | 未找到元素: desktop-login-policy
+2025-04-21 23:50:22.522 | INFO     | common.log.logger:wrapper:109 | 函数 click 执行成功，耗时: 0.008秒
+2025-04-21 23:50:23.523 | INFO     | common.selenium.selenium_service_normal:screen_page:328 | 截图保存路径: ./resource/screenshot/screenshot_20250421235023.png
+2025-04-21 23:53:38.271 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: start_browser
+2025-04-21 23:53:38.272 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49E9A1210>, SeleniumConfig(is_headless=False, is_cdp=True, is_dev=True, proxy='127.0.0.1:7890', driver=None)), kwargs={}
+2025-04-21 23:53:38.272 | INFO     | common.selenium.selenium_service_normal:start_browser:48 | 启动CDP模式
+2025-04-21 23:53:38.273 | INFO     | common.selenium.selenium_service_normal:start_browser:53 | 设置代理: 127.0.0.1:7890
+2025-04-21 23:53:39.656 | DEBUG    | common.selenium.selenium_service_normal:start_browser:68 | 使用User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.8250.151 Safari/537.36 OPR/94.0.2451.835
+2025-04-21 23:53:40.742 | INFO     | common.selenium.selenium_service_normal:start_browser:83 | 浏览器启动成功
+2025-04-21 23:53:40.743 | INFO     | common.log.logger:wrapper:109 | 函数 start_browser 执行成功，耗时: 2.471秒
+2025-04-21 23:53:42.305 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: send_keys
+2025-04-21 23:53:42.305 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49E9A1210>, 'xpath', '//*[@id="searchRoot"]/div[2]/div/div[1]/div/div[2]/div[4]/form/div[1]/textarea'), kwargs={'input_content': '测试是什么'}
+2025-04-21 23:53:42.305 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:53:42.305 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49E9A1210>, 'xpath', '//*[@id="searchRoot"]/div[2]/div/div[1]/div/div[2]/div[4]/form/div[1]/textarea'), kwargs={}
+2025-04-21 23:53:42.315 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.010秒
+2025-04-21 23:53:42.402 | INFO     | common.log.logger:wrapper:109 | 函数 send_keys 执行成功，耗时: 0.097秒
+2025-04-21 23:53:43.403 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: send_keys
+2025-04-21 23:53:43.406 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49E9A1210>, 'xpath', '//*[@id="searchRoot"]/div[2]/div/div[1]/div/div[2]/div[4]/form/div[1]/textarea'), kwargs={'input_content': '\ue007'}
+2025-04-21 23:53:43.406 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:53:43.406 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49E9A1210>, 'xpath', '//*[@id="searchRoot"]/div[2]/div/div[1]/div/div[2]/div[4]/form/div[1]/textarea'), kwargs={}
+2025-04-21 23:53:43.412 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.006秒
+2025-04-21 23:53:43.463 | INFO     | common.log.logger:wrapper:109 | 函数 send_keys 执行成功，耗时: 0.057秒
+2025-04-21 23:53:49.465 | INFO     | common.selenium.selenium_service_normal:screen_page:328 | 截图保存路径: ./resource/screenshot/screenshot_20250421235349.png
+2025-04-21 23:53:49.770 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: start_browser
+2025-04-21 23:53:49.771 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49E9C7FD0>, SeleniumConfig(is_headless=False, is_cdp=True, is_dev=True, proxy='127.0.0.1:7890', driver=None)), kwargs={}
+2025-04-21 23:53:49.771 | INFO     | common.selenium.selenium_service_normal:start_browser:48 | 启动CDP模式
+2025-04-21 23:53:49.771 | INFO     | common.selenium.selenium_service_normal:start_browser:53 | 设置代理: 127.0.0.1:7890
+2025-04-21 23:53:52.785 | DEBUG    | common.selenium.selenium_service_normal:start_browser:68 | 使用User-Agent: Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.685.29 Safari/537.36 Edg/119.0.685.29
+2025-04-21 23:53:53.852 | INFO     | common.selenium.selenium_service_normal:start_browser:83 | 浏览器启动成功
+2025-04-21 23:53:53.852 | INFO     | common.log.logger:wrapper:109 | 函数 start_browser 执行成功，耗时: 4.081秒
+2025-04-21 23:53:55.359 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: send_keys
+2025-04-21 23:53:55.359 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49E9C7FD0>, 'xpath', '//*[@id="searchRoot"]/div[2]/div/div[1]/div/div[2]/div[4]/form/div[1]/textarea'), kwargs={'input_content': 'pytest的用法'}
+2025-04-21 23:53:55.359 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:53:55.359 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49E9C7FD0>, 'xpath', '//*[@id="searchRoot"]/div[2]/div/div[1]/div/div[2]/div[4]/form/div[1]/textarea'), kwargs={}
+2025-04-21 23:53:55.373 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.014秒
+2025-04-21 23:53:55.511 | INFO     | common.log.logger:wrapper:109 | 函数 send_keys 执行成功，耗时: 0.151秒
+2025-04-21 23:53:56.512 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: send_keys
+2025-04-21 23:53:56.512 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49E9C7FD0>, 'xpath', '//*[@id="searchRoot"]/div[2]/div/div[1]/div/div[2]/div[4]/form/div[1]/textarea'), kwargs={'input_content': '\ue007'}
+2025-04-21 23:53:56.512 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:53:56.512 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49E9C7FD0>, 'xpath', '//*[@id="searchRoot"]/div[2]/div/div[1]/div/div[2]/div[4]/form/div[1]/textarea'), kwargs={}
+2025-04-21 23:53:56.517 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.004秒
+2025-04-21 23:53:56.566 | INFO     | common.log.logger:wrapper:109 | 函数 send_keys 执行成功，耗时: 0.055秒
+2025-04-21 23:54:02.567 | INFO     | common.selenium.selenium_service_normal:screen_page:328 | 截图保存路径: ./resource/screenshot/screenshot_20250421235402.png
+2025-04-21 23:54:02.780 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: start_browser
+2025-04-21 23:54:02.780 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49E9DCE10>, SeleniumConfig(is_headless=False, is_cdp=True, is_dev=True, proxy='127.0.0.1:7890', driver=None)), kwargs={}
+2025-04-21 23:54:02.781 | INFO     | common.selenium.selenium_service_normal:start_browser:48 | 启动CDP模式
+2025-04-21 23:54:02.781 | INFO     | common.selenium.selenium_service_normal:start_browser:53 | 设置代理: 127.0.0.1:7890
+2025-04-21 23:54:06.863 | DEBUG    | common.selenium.selenium_service_normal:start_browser:68 | 使用User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0
+2025-04-21 23:54:07.941 | INFO     | common.selenium.selenium_service_normal:start_browser:83 | 浏览器启动成功
+2025-04-21 23:54:07.941 | INFO     | common.log.logger:wrapper:109 | 函数 start_browser 执行成功，耗时: 5.160秒
+2025-04-21 23:54:09.490 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: send_keys
+2025-04-21 23:54:09.490 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49E9DCE10>, 'xpath', '//*[@id="searchRoot"]/div[2]/div/div[1]/div/div[2]/div[4]/form/div[1]/textarea'), kwargs={'input_content': 'selenium的使用'}
+2025-04-21 23:54:09.490 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:54:09.490 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49E9DCE10>, 'xpath', '//*[@id="searchRoot"]/div[2]/div/div[1]/div/div[2]/div[4]/form/div[1]/textarea'), kwargs={}
+2025-04-21 23:54:09.500 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.010秒
+2025-04-21 23:54:09.636 | INFO     | common.log.logger:wrapper:109 | 函数 send_keys 执行成功，耗时: 0.145秒
+2025-04-21 23:54:10.636 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: send_keys
+2025-04-21 23:54:10.636 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49E9DCE10>, 'xpath', '//*[@id="searchRoot"]/div[2]/div/div[1]/div/div[2]/div[4]/form/div[1]/textarea'), kwargs={'input_content': '\ue007'}
+2025-04-21 23:54:10.636 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:54:10.636 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49E9DCE10>, 'xpath', '//*[@id="searchRoot"]/div[2]/div/div[1]/div/div[2]/div[4]/form/div[1]/textarea'), kwargs={}
+2025-04-21 23:54:10.641 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.005秒
+2025-04-21 23:54:10.696 | INFO     | common.log.logger:wrapper:109 | 函数 send_keys 执行成功，耗时: 0.059秒
+2025-04-21 23:54:16.696 | INFO     | common.selenium.selenium_service_normal:screen_page:328 | 截图保存路径: ./resource/screenshot/screenshot_20250421235416.png
+2025-04-21 23:54:16.942 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: start_browser
+2025-04-21 23:54:16.943 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA38790>, SeleniumConfig(is_headless=False, is_cdp=True, is_dev=True, proxy='127.0.0.1:7890', driver=None)), kwargs={}
+2025-04-21 23:54:16.943 | INFO     | common.selenium.selenium_service_normal:start_browser:48 | 启动CDP模式
+2025-04-21 23:54:16.943 | INFO     | common.selenium.selenium_service_normal:start_browser:53 | 设置代理: 127.0.0.1:7890
+2025-04-21 23:54:20.687 | DEBUG    | common.selenium.selenium_service_normal:start_browser:68 | 使用User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.7431.907 Safari/537.36
+2025-04-21 23:54:21.763 | INFO     | common.selenium.selenium_service_normal:start_browser:83 | 浏览器启动成功
+2025-04-21 23:54:21.764 | INFO     | common.log.logger:wrapper:109 | 函数 start_browser 执行成功，耗时: 4.822秒
+2025-04-21 23:54:23.311 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: click
+2025-04-21 23:54:23.311 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA38790>, 'xpath', '//*[@id="left-menu"]/div/div[1]/div[2]/button'), kwargs={}
+2025-04-21 23:54:23.311 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:54:23.311 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA38790>, 'xpath', '//*[@id="left-menu"]/div/div[1]/div[2]/button'), kwargs={}
+2025-04-21 23:54:23.320 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.009秒
+2025-04-21 23:54:23.389 | INFO     | common.log.logger:wrapper:109 | 函数 click 执行成功，耗时: 0.079秒
+2025-04-21 23:54:24.391 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: click
+2025-04-21 23:54:24.392 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA38790>, 'xpath', '/html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button'), kwargs={}
+2025-04-21 23:54:24.394 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:54:24.394 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA38790>, 'xpath', '/html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button'), kwargs={}
+2025-04-21 23:54:24.419 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: /html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button
+2025-04-21 23:54:24.419 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.024秒
+2025-04-21 23:54:24.420 | ERROR    | common.selenium.selenium_service_normal:click:356 | 未找到元素: /html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button
+2025-04-21 23:54:24.420 | INFO     | common.log.logger:wrapper:109 | 函数 click 执行成功，耗时: 0.026秒
+2025-04-21 23:54:25.421 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: send_keys
+2025-04-21 23:54:25.421 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA38790>, 'id', 'desktop-login-account'), kwargs={'input_content': 'test_user'}
+2025-04-21 23:54:25.421 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:54:25.421 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA38790>, 'id', 'desktop-login-account'), kwargs={}
+2025-04-21 23:54:25.430 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: desktop-login-account
+2025-04-21 23:54:25.430 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.009秒
+2025-04-21 23:54:25.430 | ERROR    | common.selenium.selenium_service_normal:send_keys:226 | 未找到元素: desktop-login-account
+2025-04-21 23:54:25.430 | INFO     | common.log.logger:wrapper:109 | 函数 send_keys 执行成功，耗时: 0.009秒
+2025-04-21 23:54:26.432 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: send_keys
+2025-04-21 23:54:26.432 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA38790>, 'id', 'desktop-login-pwd'), kwargs={'input_content': 'test_password'}
+2025-04-21 23:54:26.432 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:54:26.432 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA38790>, 'id', 'desktop-login-pwd'), kwargs={}
+2025-04-21 23:54:26.439 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: desktop-login-pwd
+2025-04-21 23:54:26.439 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.006秒
+2025-04-21 23:54:26.439 | ERROR    | common.selenium.selenium_service_normal:send_keys:226 | 未找到元素: desktop-login-pwd
+2025-04-21 23:54:26.440 | INFO     | common.log.logger:wrapper:109 | 函数 send_keys 执行成功，耗时: 0.008秒
+2025-04-21 23:54:27.440 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: click
+2025-04-21 23:54:27.440 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA38790>, 'xpath', '/html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1]'), kwargs={}
+2025-04-21 23:54:27.440 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:54:27.440 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA38790>, 'xpath', '/html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1]'), kwargs={}
+2025-04-21 23:54:27.448 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: /html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1]
+2025-04-21 23:54:27.448 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.008秒
+2025-04-21 23:54:27.448 | ERROR    | common.selenium.selenium_service_normal:click:356 | 未找到元素: /html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1]
+2025-04-21 23:54:27.448 | INFO     | common.log.logger:wrapper:109 | 函数 click 执行成功，耗时: 0.008秒
+2025-04-21 23:54:28.450 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: click
+2025-04-21 23:54:28.450 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA38790>, 'id', 'desktop-login-policy'), kwargs={}
+2025-04-21 23:54:28.450 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:54:28.450 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA38790>, 'id', 'desktop-login-policy'), kwargs={}
+2025-04-21 23:54:28.457 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: desktop-login-policy
+2025-04-21 23:54:28.457 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.007秒
+2025-04-21 23:54:28.457 | ERROR    | common.selenium.selenium_service_normal:click:356 | 未找到元素: desktop-login-policy
+2025-04-21 23:54:28.457 | INFO     | common.log.logger:wrapper:109 | 函数 click 执行成功，耗时: 0.007秒
+2025-04-21 23:54:29.458 | INFO     | common.selenium.selenium_service_normal:screen_page:328 | 截图保存路径: ./resource/screenshot/screenshot_20250421235429.png
+2025-04-21 23:54:29.634 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: start_browser
+2025-04-21 23:54:29.634 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA3EF10>, SeleniumConfig(is_headless=False, is_cdp=True, is_dev=True, proxy='127.0.0.1:7890', driver=None)), kwargs={}
+2025-04-21 23:54:29.634 | INFO     | common.selenium.selenium_service_normal:start_browser:48 | 启动CDP模式
+2025-04-21 23:54:29.634 | INFO     | common.selenium.selenium_service_normal:start_browser:53 | 设置代理: 127.0.0.1:7890
+2025-04-21 23:54:32.532 | DEBUG    | common.selenium.selenium_service_normal:start_browser:68 | 使用User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.821.19 Safari/537.36 Edg/118.0.821.19
+2025-04-21 23:54:33.586 | INFO     | common.selenium.selenium_service_normal:start_browser:83 | 浏览器启动成功
+2025-04-21 23:54:33.587 | INFO     | common.log.logger:wrapper:109 | 函数 start_browser 执行成功，耗时: 3.952秒
+2025-04-21 23:54:35.185 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: click
+2025-04-21 23:54:35.185 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA3EF10>, 'xpath', '//*[@id="left-menu"]/div/div[1]/div[2]/button'), kwargs={}
+2025-04-21 23:54:35.185 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:54:35.185 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA3EF10>, 'xpath', '//*[@id="left-menu"]/div/div[1]/div[2]/button'), kwargs={}
+2025-04-21 23:54:35.193 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.008秒
+2025-04-21 23:54:35.263 | INFO     | common.log.logger:wrapper:109 | 函数 click 执行成功，耗时: 0.078秒
+2025-04-21 23:54:36.264 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: click
+2025-04-21 23:54:36.264 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA3EF10>, 'xpath', '/html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button'), kwargs={}
+2025-04-21 23:54:36.264 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:54:36.264 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA3EF10>, 'xpath', '/html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button'), kwargs={}
+2025-04-21 23:54:36.274 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: /html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button
+2025-04-21 23:54:36.274 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.010秒
+2025-04-21 23:54:36.274 | ERROR    | common.selenium.selenium_service_normal:click:356 | 未找到元素: /html/body/div[16]/div[3]/div[2]/div/div[2]/div[2]/button
+2025-04-21 23:54:36.274 | INFO     | common.log.logger:wrapper:109 | 函数 click 执行成功，耗时: 0.010秒
+2025-04-21 23:54:37.276 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: send_keys
+2025-04-21 23:54:37.276 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA3EF10>, 'id', 'desktop-login-account'), kwargs={'input_content': ''}
+2025-04-21 23:54:37.276 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:54:37.276 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA3EF10>, 'id', 'desktop-login-account'), kwargs={}
+2025-04-21 23:54:37.284 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: desktop-login-account
+2025-04-21 23:54:37.284 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.008秒
+2025-04-21 23:54:37.284 | ERROR    | common.selenium.selenium_service_normal:send_keys:226 | 未找到元素: desktop-login-account
+2025-04-21 23:54:37.284 | INFO     | common.log.logger:wrapper:109 | 函数 send_keys 执行成功，耗时: 0.008秒
+2025-04-21 23:54:38.286 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: send_keys
+2025-04-21 23:54:38.286 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA3EF10>, 'id', 'desktop-login-pwd'), kwargs={'input_content': 'test_password'}
+2025-04-21 23:54:38.286 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:54:38.286 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA3EF10>, 'id', 'desktop-login-pwd'), kwargs={}
+2025-04-21 23:54:38.293 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: desktop-login-pwd
+2025-04-21 23:54:38.293 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.007秒
+2025-04-21 23:54:38.293 | ERROR    | common.selenium.selenium_service_normal:send_keys:226 | 未找到元素: desktop-login-pwd
+2025-04-21 23:54:38.293 | INFO     | common.log.logger:wrapper:109 | 函数 send_keys 执行成功，耗时: 0.007秒
+2025-04-21 23:54:39.294 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: click
+2025-04-21 23:54:39.294 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA3EF10>, 'xpath', '/html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1]'), kwargs={}
+2025-04-21 23:54:39.294 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:54:39.294 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA3EF10>, 'xpath', '/html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1]'), kwargs={}
+2025-04-21 23:54:39.301 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: /html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1]
+2025-04-21 23:54:39.302 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.008秒
+2025-04-21 23:54:39.302 | ERROR    | common.selenium.selenium_service_normal:click:356 | 未找到元素: /html/body/div[16]/div[3]/div[2]/form/div/div[1]/button[1]
+2025-04-21 23:54:39.302 | INFO     | common.log.logger:wrapper:109 | 函数 click 执行成功，耗时: 0.008秒
+2025-04-21 23:54:40.303 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: click
+2025-04-21 23:54:40.303 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA3EF10>, 'id', 'desktop-login-policy'), kwargs={}
+2025-04-21 23:54:40.303 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:54:40.304 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x000001B49EA3EF10>, 'id', 'desktop-login-policy'), kwargs={}
+2025-04-21 23:54:40.316 | ERROR    | common.selenium.selenium_service_normal:find_element:206 | 未找到匹配的元素: desktop-login-policy
+2025-04-21 23:54:40.316 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.012秒
+2025-04-21 23:54:40.316 | ERROR    | common.selenium.selenium_service_normal:click:356 | 未找到元素: desktop-login-policy
+2025-04-21 23:54:40.317 | INFO     | common.log.logger:wrapper:109 | 函数 click 执行成功，耗时: 0.014秒
+2025-04-21 23:54:41.317 | INFO     | common.selenium.selenium_service_normal:screen_page:328 | 截图保存路径: ./resource/screenshot/screenshot_20250421235441.png
+2025-04-21 23:55:46.824 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: start_browser
+2025-04-21 23:55:46.825 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000021D309A1390>, SeleniumConfig(is_headless=False, is_cdp=True, is_dev=True, proxy='127.0.0.1:7890', driver=None)), kwargs={}
+2025-04-21 23:55:46.825 | INFO     | common.selenium.selenium_service_normal:start_browser:48 | 启动CDP模式
+2025-04-21 23:55:46.825 | INFO     | common.selenium.selenium_service_normal:start_browser:53 | 设置代理: 127.0.0.1:7890
+2025-04-21 23:55:48.854 | DEBUG    | common.selenium.selenium_service_normal:start_browser:68 | 使用User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_8) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1 Safari/605.1.15
+2025-04-21 23:55:49.945 | INFO     | common.selenium.selenium_service_normal:start_browser:83 | 浏览器启动成功
+2025-04-21 23:55:49.946 | INFO     | common.log.logger:wrapper:109 | 函数 start_browser 执行成功，耗时: 3.121秒
+2025-04-21 23:55:52.017 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: send_keys
+2025-04-21 23:55:52.017 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000021D309A1390>, 'xpath', '//*[@id="searchRoot"]/div[2]/div/div[1]/div/div[2]/div[4]/form/div[1]/textarea'), kwargs={'input_content': '测试是什么'}
+2025-04-21 23:55:52.017 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:55:52.017 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000021D309A1390>, 'xpath', '//*[@id="searchRoot"]/div[2]/div/div[1]/div/div[2]/div[4]/form/div[1]/textarea'), kwargs={}
+2025-04-21 23:55:52.029 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.011秒
+2025-04-21 23:55:52.109 | INFO     | common.log.logger:wrapper:109 | 函数 send_keys 执行成功，耗时: 0.092秒
+2025-04-21 23:55:53.112 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: send_keys
+2025-04-21 23:55:53.112 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000021D309A1390>, 'xpath', '//*[@id="searchRoot"]/div[2]/div/div[1]/div/div[2]/div[4]/form/div[1]/textarea'), kwargs={'input_content': '\ue007'}
+2025-04-21 23:55:53.112 | INFO     | common.log.logger:wrapper:103 | 开始执行函数: find_element
+2025-04-21 23:55:53.112 | INFO     | common.log.logger:wrapper:104 | 参数: args=(<common.selenium.selenium_service_normal.SeleniumServiceNormal object at 0x0000021D309A1390>, 'xpath', '//*[@id="searchRoot"]/div[2]/div/div[1]/div/div[2]/div[4]/form/div[1]/textarea'), kwargs={}
+2025-04-21 23:55:53.119 | INFO     | common.log.logger:wrapper:109 | 函数 find_element 执行成功，耗时: 0.007秒
+2025-04-21 23:55:53.180 | INFO     | common.log.logger:wrapper:109 | 函数 send_keys 执行成功，耗时: 0.068秒

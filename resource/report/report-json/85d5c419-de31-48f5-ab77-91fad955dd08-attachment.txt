@@ -1,0 +1,6 @@
+[32mINFO    [0m pytest:conftest.py:48 Starting test: test_search[\u6d4b\u8bd5\u662f\u4ec0\u4e48]
+[32mINFO    [0m WDM:logger.py:11 ====== WebDriver manager ======
+[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+[32mINFO    [0m WDM:logger.py:11 Driver [C:\Users\16783\.wdm\drivers\chromedriver\win64\135.0.7049.95\chromedriver-win32/chromedriver.exe] found in cache
+[32mINFO    [0m pytest:conftest.py:54 Test completed: test_search[\u6d4b\u8bd5\u662f\u4ec0\u4e48], Result: PASSED

@@ -1,0 +1,5 @@
+2025-04-21 23:55:46 --> conftest.py [line:48 ] --> INFO  --> Starting test: test_search[\u6d4b\u8bd5\u662f\u4ec0\u4e48]
+2025-04-21 23:55:46 --> logger.py  [line:11 ] --> INFO  --> ====== WebDriver manager ======
+2025-04-21 23:55:48 --> logger.py  [line:11 ] --> INFO  --> Get LATEST chromedriver version for google-chrome
+2025-04-21 23:55:48 --> logger.py  [line:11 ] --> INFO  --> Get LATEST chromedriver version for google-chrome
+2025-04-21 23:55:48 --> logger.py  [line:11 ] --> INFO  --> Driver [C:\Users\16783\.wdm\drivers\chromedriver\win64\135.0.7049.95\chromedriver-win32/chromedriver.exe] found in cache

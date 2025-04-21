@@ -1,0 +1,6 @@
+[32mINFO    [0m pytest:conftest.py:48 Starting test: test_login[test_user-test_password]
+[32mINFO    [0m WDM:logger.py:11 ====== WebDriver manager ======
+[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+[32mINFO    [0m WDM:logger.py:11 Driver [C:\Users\16783\.wdm\drivers\chromedriver\win64\135.0.7049.95\chromedriver-win32/chromedriver.exe] found in cache
+[32mINFO    [0m pytest:conftest.py:54 Test completed: test_login[test_user-test_password], Result: FAILED
